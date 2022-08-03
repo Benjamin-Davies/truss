@@ -1,6 +1,9 @@
 use std::{fs, path::Path};
 
-use crate::model::{Force, Member, Pin, TrussProblem, Vec2};
+use crate::{
+    model::{Force, Member, Pin, TrussProblem},
+    vec2::Vec2,
+};
 
 pub fn load_input_file(path: impl AsRef<Path>) -> TrussProblem {
     let input = fs::read_to_string(path).unwrap();
@@ -43,7 +46,10 @@ pub fn load_input_file(path: impl AsRef<Path>) -> TrussProblem {
 
 #[cfg(test)]
 mod tests {
-    use crate::model::{Force, Member, Pin, Vec2};
+    use crate::{
+        model::{Force, Member, Pin},
+        vec2::Vec2,
+    };
 
     use super::load_input_file;
 
