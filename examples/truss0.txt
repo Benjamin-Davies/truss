@@ -1,15 +1,15 @@
-joint A 0.00 0.00
-joint B 0.15 0.00
-joint C 0.15 0.20
-joint D 0.30 0.20
-joint E 0.30 0.40
-joint F 0.50 0.60
-joint G 0.50 0.40
-joint H 0.70 0.40
-joint I 0.70 0.20
-joint J 0.85 0.20
-joint K 0.85 0.00
-joint L 1.00 0.00
+pin A 0.00 0.00
+pin B 0.15 0.00
+pin C 0.15 0.20
+pin D 0.30 0.20
+pin E 0.30 0.40
+pin F 0.50 0.60
+pin G 0.50 0.40
+pin H 0.70 0.40
+pin I 0.70 0.20
+pin J 0.85 0.20
+pin K 0.85 0.00
+pin L 1.00 0.00
 
 member AB
 member AC
@@ -23,7 +23,7 @@ member EF
 member EG
 member FG
 member FH
-member FI
+member GI
 member GH
 member HI
 member HJ

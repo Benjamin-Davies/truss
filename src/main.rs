@@ -8,7 +8,7 @@ pub mod rigid_body;
 pub mod vec2;
 
 fn main() {
-    let mut problem = load_input_file("examples/triangle.txt");
+    let mut problem = load_input_file("examples/truss0.txt");
 
     rigid_body::solve_misc_forces(&mut problem);
     member::solve_member_forces(&mut problem);
@@ -18,7 +18,7 @@ fn main() {
 
 fn print_problem(problem: &TrussProblem) {
     for (name, pin) in &problem.pins {
-        println!("pin {} {} {}", name, pin.0.x(), pin.0.y());
+        println!("pin {} {:5.2} {:5.2}", name, pin.0.x(), pin.0.y());
     }
     println!();
     for member in &problem.members {
@@ -28,7 +28,7 @@ fn print_problem(problem: &TrussProblem) {
             member.pin_b,
             member
                 .tension
-                .map(|t| format!("{:+.3}", t))
+                .map(|t| format!("{:6.3}", t))
                 .unwrap_or("-".to_string())
         );
     }
@@ -39,7 +39,7 @@ fn print_problem(problem: &TrussProblem) {
             force.pin,
             force
                 .magnitude
-                .map(|t| format!("{:+.3}", t))
+                .map(|t| format!("{:6.3}", t))
                 .unwrap_or("-".to_string()),
             force.direction
         );

@@ -99,7 +99,7 @@ fn solve_pin(problem: &mut TrussProblem, pin: char) {
         solve(&matrix_b, &-(matrix_c * known_force_magnitudes))
     } else {
         matrix(
-            c![-(matrix_c * known_force_magnitudes).col(0)[0] / matrix_b.col(0)[0]],
+            c![-(matrix_c * known_force_magnitudes).data[0] / matrix_b.data[0]],
             1,
             1,
             Col,
