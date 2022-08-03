@@ -1,6 +1,7 @@
 use input::load_input_file;
 
 pub mod input;
+pub mod member;
 pub mod model;
 pub mod rigid_body;
 pub mod vec2;
@@ -11,5 +12,8 @@ fn main() {
     println!("{:?}", problem);
 
     rigid_body::solve_misc_forces(&mut problem);
+    println!("{:?}", problem);
+
+    member::solve_member_forces(&mut problem);
     println!("{:?}", problem);
 }

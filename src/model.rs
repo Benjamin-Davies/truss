@@ -1,4 +1,4 @@
-use std::collections::BTreeMap;
+use std::{collections::BTreeMap, mem::swap};
 
 use crate::vec2::Vec2;
 
@@ -17,6 +17,14 @@ pub struct Member {
     pub pin_a: char,
     pub pin_b: char,
     pub tension: Option<f64>,
+}
+
+impl Member {
+    pub fn reversed(&self) -> Member {
+        let mut new = self.clone();
+        swap(&mut new.pin_a, &mut new.pin_b);
+        new
+    }
 }
 
 #[derive(Clone, Debug, PartialEq)]

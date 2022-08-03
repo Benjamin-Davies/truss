@@ -53,7 +53,7 @@ pub fn solve_misc_forces(problem: &mut TrussProblem) {
         Row,
     );
 
-    // B * b + C * c => B * b = -(C * c)
+    // B * b + C * c = 0 => B * b = -(C * c)
     let unknown_force_magnitudes = solve(&matrix_b, &-(matrix_c * known_force_manitudes));
 
     for (&i, magnitude) in unknown_forces.iter().zip(unknown_force_magnitudes.data) {
