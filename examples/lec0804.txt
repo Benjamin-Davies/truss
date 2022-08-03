@@ -1,0 +1,22 @@
+pin A 0 0
+pin B 1 1.5
+pin C 1 0
+pin D 2 1.5
+pin E 2 0
+pin F 3 0
+
+member AB
+member AC
+member BC
+member BD
+member BE
+member CE
+member DE
+member DF
+member EF
+
+force A - 0
+force A - 90
+force C 600 270
+force E 900 270
+force F - 90

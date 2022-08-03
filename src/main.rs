@@ -1,3 +1,5 @@
+use std::env;
+
 use input::load_input_file;
 use model::TrussProblem;
 
@@ -8,7 +10,11 @@ pub mod rigid_body;
 pub mod vec2;
 
 fn main() {
-    let mut problem = load_input_file("examples/truss0.txt");
+    let filename = env::args()
+        .nth(1)
+        .unwrap_or_else(|| "truss0.txt".to_owned());
+    let path = env::current_dir().unwrap().join("examples").join(filename);
+    let mut problem = load_input_file(path);
 
     rigid_body::solve_misc_forces(&mut problem);
     member::solve_member_forces(&mut problem);
