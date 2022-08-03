@@ -6,7 +6,7 @@ member AB
 member AC
 member BC
 
-reaction A 0
-reaction A 90
-reaction B 90
-force C 1 90
+force A - 0
+force A - 90
+force B - 90
+force C 1 270

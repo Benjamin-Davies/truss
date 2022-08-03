@@ -33,7 +33,7 @@ member JK
 member JL
 member KL
 
-reaction A 0
-reaction A 90
+force A _ 0
+force A _ 90
 force I 1 270
-reaction L 90
+force L _ 90
