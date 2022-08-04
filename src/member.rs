@@ -98,8 +98,15 @@ fn solve_pin(problem: &mut TrussProblem, pin: char) {
     let unknown_tension_values = if matrix_b.col >= 2 {
         solve(&matrix_b, &-(matrix_c * known_force_magnitudes))
     } else {
+        // If we only have one unknown, then pick the row that gives us the most accuracy
+        let (i, matrix_b_entry) = matrix_b
+            .data
+            .iter()
+            .enumerate()
+            .max_by(|(_, a), (_, b)| a.abs().partial_cmp(&b.abs()).unwrap())
+            .unwrap();
         matrix(
-            c![-(matrix_c * known_force_magnitudes).data[0] / matrix_b.data[0]],
+            c![-(matrix_c * known_force_magnitudes).data[i] / matrix_b_entry],
             1,
             1,
             Col,
