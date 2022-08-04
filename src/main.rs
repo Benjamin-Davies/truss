@@ -12,7 +12,7 @@ pub mod vec2;
 fn main() {
     let filename = env::args()
         .nth(1)
-        .unwrap_or_else(|| "truss0.txt".to_owned());
+        .unwrap_or_else(|| "truss31.txt".to_owned());
     let path = env::current_dir().unwrap().join("examples").join(filename);
     let mut problem = load_input_file(path);
 
