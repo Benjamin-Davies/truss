@@ -99,6 +99,7 @@ fn solve_pin(problem: &mut TrussProblem, pin: char) {
         solve(&matrix_b, &-(matrix_c * known_force_magnitudes))
     } else {
         // If we only have one unknown, then pick the row that gives us the most accuracy
+        // This also avoids divide by zeros
         let (i, matrix_b_entry) = matrix_b
             .data
             .iter()
