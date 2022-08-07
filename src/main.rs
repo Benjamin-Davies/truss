@@ -1,13 +1,6 @@
 use std::env;
 
-use input::load_input_file;
-use model::TrussProblem;
-
-pub mod input;
-pub mod member;
-pub mod model;
-pub mod rigid_body;
-pub mod vec2;
+use truss::{input::load_input_file, member, model::TrussProblem, rigid_body};
 
 fn main() {
     let filename = env::args()

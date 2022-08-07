@@ -23,8 +23,8 @@ member EF
 member EG
 member FG
 member FH
-member GI
 member GH
+member GI
 member HI
 member HJ
 member IJ

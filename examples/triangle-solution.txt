@@ -1,0 +1,12 @@
+pin A 0 0
+pin B 2 0
+pin C 1 1
+
+member AB  0.500
+member AC -0.707
+member BC -0.707
+
+force A 0.0 0
+force A 0.5 90
+force B 0.5 90
+force C 1.0 270

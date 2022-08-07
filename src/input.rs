@@ -27,7 +27,7 @@ pub fn load_input_file(path: impl AsRef<Path>) -> TrussProblem {
                 problem.members.push(Member {
                     pin_a: chars.next().unwrap(),
                     pin_b: chars.next().unwrap(),
-                    tension: None,
+                    tension: parts.next().and_then(|t| t.parse().ok()),
                 });
             }
             "force" => {

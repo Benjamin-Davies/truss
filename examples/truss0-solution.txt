@@ -1,0 +1,39 @@
+pin A 0.00 0.00
+pin B 0.15 0.00
+pin C 0.15 0.20
+pin D 0.30 0.20
+pin E 0.30 0.40
+pin F 0.50 0.60
+pin G 0.50 0.40
+pin H 0.70 0.40
+pin I 0.70 0.20
+pin J 0.85 0.20
+pin K 0.85 0.00
+pin L 1.00 0.00
+
+member AB  0.225
+member AC -0.375
+member BC -0.300
+member BD  0.375
+member CD  0.225
+member CE -0.750
+member DE -0.150
+member DG  0.636
+member EF -1.060
+member EG  0.300
+member FG  1.500
+member FH -1.060
+member GH -0.300
+member GI  1.490
+member HI  0.650
+member HJ -1.750
+member IJ  0.525
+member IK  0.875
+member JK -0.700
+member JL -0.875
+member KL  0.525
+
+force A 0.0 0
+force A 0.3 90
+force I 1.0 270
+force L 0.7 90
